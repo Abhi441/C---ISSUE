@@ -1,2 +1,7 @@
  Readonly - https://www.youtube.com/watch?v=nPYE-wPkTIY
  Readonly  - https://www.youtube.com/watch?v=q1rp1ZBfM0w
+
+
+1)
+Backend error- Bdcontext is namespace, you are using type 
+https://www.codeproject.com/Questions/785149/csharp-is-a-namespace-but-is-used-like-a-type
