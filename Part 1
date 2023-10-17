@@ -5,3 +5,18 @@
 1)
 Backend error- Bdcontext is namespace, you are using type 
 https://www.codeproject.com/Questions/785149/csharp-is-a-namespace-but-is-used-like-a-type
+
+2>error : Microsoft.Data.SqlClient.SqlException: 'Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF.'
+Solution : The error message you're encountering, "Cannot insert explicit value for identity column in table 'Bookings' when IDENTITY_INSERT is set to OFF," indicates that you are trying to insert a value explicitly into a column with an identity
+property (e.g., an auto-incrementing primary key), and this is not allowed by default in SQL Server.
+To resolve this issue, you have a few options:
+Option 1: Remove the Id Field from the INSERT Statement
+If your Id column is set to auto-increment (identity), you don't need to specify its value in the INSERT statement. You can modify your SQL command to exclude
+the Id column from the column list and the parameter bindings. The database will automatically generate the Id for you.
+3> The error message "Invalid object name" suggests that the SQL Server is unable to find the "Bookings" table in the database. This issue could be caused by various reasons, such as a misspelled table name, a schema mismatch, or the table not existing in the database. Here are some steps to troubleshoot and resolve this issue:
+
+Check Table Name and Schema:
+
+Ensure that the table name is spelled correctly, including case sensitivity.
+Verify that the table is in the correct schema, especially if your database uses schemas. For example, if your table is in the "dbo" schema, it should be 
+referred to as "dbo.Bookings".
